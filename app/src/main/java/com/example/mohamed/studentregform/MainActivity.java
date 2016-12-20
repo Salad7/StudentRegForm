@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     Button submitBtn;
     //Student s = new Student("Mohamed Salad","msalad@uncc.edu","CCI","Lol",5);
-    Student s;
+    Student s = new Student();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
