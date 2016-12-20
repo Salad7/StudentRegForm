@@ -18,8 +18,10 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
         moodText = (TextView) findViewById(R.id.moodText);
-
-        getIntent().getParcelableExtra("STUDENT");
+        //Create a student object by setting it equal to the extra
+        Student s = getIntent().getParcelableExtra(MainActivity.TAG);
+        //Store the mood in the text view
+        moodText.setText(s.getMood() + "");
 
     }
 }

@@ -26,7 +26,7 @@ public class Student implements Parcelable {
     }
 
     public void writeToParcel(Parcel out, int flags) {
-        //Write to Parcel the mood
+        //convert mood to parcel
         out.writeInt(mood);
     }
 
@@ -42,6 +42,7 @@ public class Student implements Parcelable {
     };
 
     private Student(Parcel in) {
+        //Set mood
         this.mood = in.readInt();
     }
 
