@@ -13,6 +13,10 @@ public class Student implements Serializable{
     private String state;
     private int mood;
 
+    Student() {
+
+    }
+
     Student(String name, String email, String department, String state, int mood){
         this.name = name;
         this.email = email;

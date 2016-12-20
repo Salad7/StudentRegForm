@@ -21,4 +21,14 @@
         android:max="100"
         android:layout_marginTop="120dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/mood"
+        android:layout_toEndOf="@+id/mood" />
 </RelativeLayout>
