@@ -1,21 +1,49 @@
 package com.example.mohamed.studentregform;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 /**
  * Created by mohamed on 12/20/16.
  */
 
-public class Student implements Serializable{
+public class Student implements Parcelable {
     private String name;
     private String email;
     private String department;
     private String state;
     private int mood;
+    private int mData;
 
     Student() {
 
     }
+
+    public int describeContents() {
+        return 0;
+    }
+
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeInt(mData);
+    }
+
+    public static final Parcelable.Creator<Student> CREATOR
+            = new Parcelable.Creator<Student>() {
+        public Student createFromParcel(Parcel in) {
+            return new Student(in);
+        }
+
+        public Student[] newArray(int size) {
+            return new Student[size];
+        }
+    };
+
+    private Student(Parcel in) {
+        mData = in.readInt();
+    }
+
 
     Student(String name, String email, String department, String state, int mood){
         this.name = name;
