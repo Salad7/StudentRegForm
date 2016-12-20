@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
+    final static String TAG = "STUDENT";
     SeekBar seekBar;
     TextView textView;
     Button submitBtn;
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+                intent.putExtra(TAG, s);
                 startActivity(intent);
 
 

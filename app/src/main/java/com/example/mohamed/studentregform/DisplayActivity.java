@@ -19,5 +19,7 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         moodText = (TextView) findViewById(R.id.moodText);
 
+        getIntent().getParcelableExtra("STUDENT");
+
     }
 }

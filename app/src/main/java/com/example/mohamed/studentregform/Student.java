@@ -26,7 +26,8 @@ public class Student implements Parcelable {
     }
 
     public void writeToParcel(Parcel out, int flags) {
-        out.writeInt(mData);
+        //Write to Parcel the mood
+        out.writeInt(mood);
     }
 
     public static final Parcelable.Creator<Student> CREATOR
@@ -41,7 +42,7 @@ public class Student implements Parcelable {
     };
 
     private Student(Parcel in) {
-        mData = in.readInt();
+        this.mood = in.readInt();
     }
 
 
